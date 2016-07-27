@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '1.6.1'
+version = '0.1.0'
 
 setup(name='zopyx.plone.hyphenator',
       version=version,
