@@ -18,6 +18,15 @@
         permission="cmf.ManagePortal"
     />
 
+    <browser:page
+        name="hyphenator-configuration"
+        for="*"
+        layer="zopyx.plone.hyphenator.interfaces.IBrowserLayer"
+        class=".hyphenator.Hyphenator"
+        attribute="configuration"
+        permission="zope2.View"
+    />
+
     <browser:resourceDirectory
         name="zopyx.plone.hyphenator"
         directory="resources"

@@ -20,6 +20,6 @@ class IHyphenatorSettings(Interface):
     selector = schema.Text(
         title=_(u'Selectors'),
         description=_(u'Query selectors used to hyphenate text'),
-        default=u'.span',
+        default=u'span',
         required=False
     )
