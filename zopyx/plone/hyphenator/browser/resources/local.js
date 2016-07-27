@@ -4,12 +4,11 @@ $(document).ready(function() {
 
     var hyphenatorSettings = {
        selectorfunction: function () {
-            return $(selectors.join(' ')).get();
+            return $(selectors.join(',')).get();
        }
     };  
 
     $.get(PORTAL_URL + '/@@hyphenator-configuration').success(function(data) {
-        console.log(data);
         data = $.parseJSON(data);
         selectors = data['selectors'];
         Hyphenator.config(hyphenatorSettings);

@@ -10,6 +10,9 @@ from zope.interface import Interface
 from zopyx.plone.hyphenator.i18n import MessageFactory as _
 
 
+SELECTORS = u'.plone-toolbar-container span'
+
+
 class IBrowserLayer(Interface):
     """A brower layer specific to my product """
 
@@ -20,6 +23,6 @@ class IHyphenatorSettings(Interface):
     selector = schema.Text(
         title=_(u'Selectors'),
         description=_(u'Query selectors used to hyphenate text'),
-        default=u'span',
+        default=SELECTORS,
         required=False
     )
