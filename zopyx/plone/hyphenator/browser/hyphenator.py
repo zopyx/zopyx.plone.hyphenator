@@ -19,5 +19,5 @@ class Hyphenator(BrowserView):
         config = {}
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IHyphenatorSettings)
-        config['selectors'] = settings.selector.split('\n')
+        config['selectors'] = settings.selectors.split('\n')
         return json.dumps(config)

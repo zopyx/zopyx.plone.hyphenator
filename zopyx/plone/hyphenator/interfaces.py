@@ -20,7 +20,7 @@ class IBrowserLayer(Interface):
 class IHyphenatorSettings(Interface):
     """ Connector settings """
 
-    selector = schema.Text(
+    selectors = schema.Text(
         title=_(u'Selectors'),
         description=_(u'Query selectors used to hyphenate text'),
         default=SELECTORS,
