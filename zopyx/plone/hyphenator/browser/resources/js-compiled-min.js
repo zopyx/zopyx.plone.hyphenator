@@ -1,4 +1,50 @@
 
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Merging js from "files.txt" begins */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/* Last merge : Wed Jul 27 20:39:12 CEST 2016  */
+
+/* Merging order :
+
+- local.js
+- hyphenator/Hyphenator.js
+
+*/
+
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Merging js: local.js begins */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+$(document).ready(function() {
+
+    selectors = [];
+
+    var hyphenatorSettings = {
+       selectorfunction: function () {
+            return $(selectors.join(',')).get();
+       }
+    };  
+
+    $.get(PORTAL_URL + '/@@hyphenator-configuration').success(function(data) {
+        data = $.parseJSON(data);
+        selectors = data['selectors'];
+        Hyphenator.config(hyphenatorSettings);
+        Hyphenator.run();
+    });
+});
+
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Merging js: hyphenator/Hyphenator.js begins */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
 /** @license Hyphenator 5.1.0 - client side hyphenation for webbrowsers
  *  Copyright (C) 2015  Mathias Nater, Zürich (mathiasnater at gmail dot com)
  *  https://github.com/mnater/Hyphenator
