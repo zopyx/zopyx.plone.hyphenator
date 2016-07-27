@@ -1,3 +1,10 @@
 $(document).ready(function() {
-    alert('hello');
+
+    var hyphenatorSettings = {
+        selectorfunction: function () {
+            return $('span').get();
+        }
+    };
+    Hyphenator.config(hyphenatorSettings);
+    Hyphenator.run();
 });
