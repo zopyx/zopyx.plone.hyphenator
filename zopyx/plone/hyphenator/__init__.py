@@ -1,1 +1,4 @@
-# placeholder
+################################################################
+# zopyx.plone.hyphenator
+# (C) 2016,  Andreas Jung, www.zopyx.com, Tuebingen, Germany
+################################################################
