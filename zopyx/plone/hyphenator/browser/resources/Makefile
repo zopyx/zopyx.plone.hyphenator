@@ -1,2 +1,2 @@
 all:
-	./mergejs -c files.txt js-compiled-min.js
+	./mergejs -c files.txt js-compiled.js 
