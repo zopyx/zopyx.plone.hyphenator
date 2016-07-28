@@ -26,3 +26,22 @@ class IHyphenatorSettings(Interface):
         default=SELECTORS,
         required=False
     )
+    
+    minwordlength = schema.Int(
+        title=_(u'Minimum word length'),
+        description=_(u'Only hyphenate words longer than N characters'),
+        default=6,
+        required=True
+    )
+    
+#    hyphenchar = schema.TextLine(
+#        title=_(u'Hyphenation character'),
+#        description=_(u'Character used as hyphenation character'),
+#        default=u"\u00AD", # soft hyphen
+#        required=True
+#    )
+    
+    useCSS3hyphenation = schema.Bool(
+        title=_(u'Use CSS3 browser hyphenation if available (JS fallback otherwise)'),
+        default=True,
+    )

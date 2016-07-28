@@ -5,7 +5,7 @@
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
-/* Last merge : Wed Jul 27 21:13:44 CEST 2016  */
+/* Last merge : Thu Jul 28 14:37:17 CEST 2016  */
 
 /* Merging order :
 
@@ -33,6 +33,11 @@ $(document).ready(function() {
     $.get(PORTAL_URL + '/@@hyphenator-configuration').success(function(data) {
         data = $.parseJSON(data);
         selectors = data['selectors'];
+        hyphenatorSettings['minwordlength'] = data['minwordlength'];
+        hyphenatorSettings['hyphenchar'] = data['hyphenchar'];
+        hyphenatorSettings['useCSS3hyphenation'] = data['useCSS3hyphenation'];
+        console.log(hyphenatorSettings);
+
         Hyphenator.config(hyphenatorSettings);
         Hyphenator.run();
     });
