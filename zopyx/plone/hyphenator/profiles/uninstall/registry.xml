@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<registry>
+  <records interface="zopyx.plone.hyphenator.interfaces.IHyphenatorSettings"/>
+  <records prefix="plone.resources/zopyx.plone.hyphenator1" interface="Products.CMFPlone.interfaces.IResourceRegistry" remove="True"/>
+  <records prefix="plone.resources/zopyx.plone.hyphenator2" interface="Products.CMFPlone.interfaces.IResourceRegistry" remove="True"/>
+  <records prefix="plone.bundles/zopyx.plone.hyphenator1" interface="Products.CMFPlone.interfaces.IBundleRegistry" remove="True"/>
+</registry>
