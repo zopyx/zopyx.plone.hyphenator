@@ -20,5 +20,12 @@
         description="zopyx.plone.hyphenator"
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="zopyx.plone.hyphenator"
+        directory="profiles/uninstall"
+        description="zopyx.plone.hyphenator uninstall profile"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
 
 </configure>
