@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '0.1.3'
+version = '0.1.4'
 
 setup(name='zopyx.plone.hyphenator',
       version=version,
@@ -14,6 +14,11 @@ setup(name='zopyx.plone.hyphenator',
           "Programming Language :: Python",
           "Framework :: Plone",
           "Framework :: Plone :: 5.0",
+          "Framework :: Plone :: 5.1",
+          "Framework :: Plone :: 5.2",
+          "Programming Language :: Python :: 3.6",
+          "Programming Language :: Python :: 3.7",
+          "Programming Language :: Python :: 3.8",
           "Framework :: Zope2",
           "Topic :: Software Development :: Libraries :: Python Modules",
       ],
