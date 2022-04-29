@@ -16,10 +16,9 @@ from zopyx.plone.hyphenator.interfaces import IHyphenatorSettings
 class Hyphenator(BrowserView):
 
     def configuration(self):
-        config = {}
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IHyphenatorSettings)
-        config['selectors'] = settings.selectors.split('\n')
+        config = {'selectors': settings.selectors.split('\n')}
         config['minwordlength'] = settings.minwordlength
 #        config['hyphenchar'] = settings.hyphenchar
         config['useCSS3hyphenation'] = settings.useCSS3hyphenation
